@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     qInstallMessageHandler(&MainWindow::messageHandler);
 
-    setCentralWidget(new MapVisualization(this));
+    setCentralWidget(new VolumeRendererWidget(this));
 }
 
 void MainWindow::messageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg)

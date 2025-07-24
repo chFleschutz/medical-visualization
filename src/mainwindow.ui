@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Simulation and Data Visualization</string>
+   <string>Medical Visualization</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../ressources.qrc">
+   <iconset resource="../resources.qrc">
     <normaloff>:/assets/images/favicon.ico</normaloff>:/assets/images/favicon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -29,35 +29,29 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuDebug">
+   <widget class="QMenu" name="menuOther">
     <property name="title">
-     <string>Debug</string>
+     <string>Other</string>
     </property>
-    <addaction name="actionDebug"/>
+    <addaction name="actionVoronoiFracture"/>
+    <addaction name="actionDebugLog"/>
    </widget>
-   <widget class="QMenu" name="menuMap_Visualization">
-    <property name="title">
-     <string>2D Visualization</string>
-    </property>
-    <addaction name="actionMap"/>
-   </widget>
-   <widget class="QMenu" name="menuCrowd_Simulation">
+   <widget class="QMenu" name="menuSimulation">
     <property name="title">
      <string>Simulation</string>
     </property>
     <addaction name="actionPandemic"/>
    </widget>
-   <widget class="QMenu" name="menu3D_Visualization">
+   <widget class="QMenu" name="menuCTScanVis">
     <property name="title">
-     <string>3D Visualization</string>
+     <string>CT Scan Visualization</string>
     </property>
-    <addaction name="actionSlice_Viewer"/>
-    <addaction name="actionVolume_Renderer"/>
+    <addaction name="actionVolumeRenderer"/>
+    <addaction name="actionSliceViewer"/>
    </widget>
-   <addaction name="menuMap_Visualization"/>
-   <addaction name="menu3D_Visualization"/>
-   <addaction name="menuCrowd_Simulation"/>
-   <addaction name="menuDebug"/>
+   <addaction name="menuCTScanVis"/>
+   <addaction name="menuSimulation"/>
+   <addaction name="menuOther"/>
   </widget>
   <action name="actionShow_Output">
    <property name="text">
@@ -69,9 +63,9 @@
     <string>Show Output</string>
    </property>
   </action>
-  <action name="actionMap">
+  <action name="actionVoronoiFracture">
    <property name="text">
-    <string>Map</string>
+    <string>Voronoi Fracture</string>
    </property>
   </action>
   <action name="actionPandemic">
@@ -79,54 +73,27 @@
     <string>Pandemic Simulation</string>
    </property>
   </action>
-  <action name="actionSlice_Viewer">
+  <action name="actionSliceViewer">
    <property name="text">
     <string>Slice Viewer</string>
    </property>
   </action>
-  <action name="actionVolume_Renderer">
+  <action name="actionVolumeRenderer">
    <property name="text">
     <string>Volume Renderer</string>
+   </property>
+  </action>
+  <action name="actionDebugLog">
+   <property name="text">
+    <string>Show Debug Log</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="../ressources.qrc"/>
+  <include location="../resources.qrc"/>
  </resources>
  <connections>
-  <connection>
-   <sender>actionDebug</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>onShowDebugOutput()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>339</x>
-     <y>255</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionMap</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindowClass</receiver>
-   <slot>onMapVisualization()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>285</x>
-     <y>255</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>actionPandemic</sender>
    <signal>triggered()</signal>
@@ -144,7 +111,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>actionSlice_Viewer</sender>
+   <sender>actionSliceViewer</sender>
    <signal>triggered()</signal>
    <receiver>MainWindowClass</receiver>
    <slot>onSliceViewer()</slot>
@@ -160,10 +127,42 @@
    </hints>
   </connection>
   <connection>
-   <sender>actionVolume_Renderer</sender>
+   <sender>actionVolumeRenderer</sender>
    <signal>triggered()</signal>
    <receiver>MainWindowClass</receiver>
    <slot>onVolumeRendering()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>427</x>
+     <y>319</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVoronoiFracture</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>onMapVisualization()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>427</x>
+     <y>319</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDebugLog</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindowClass</receiver>
+   <slot>onShowDebugOutput()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>

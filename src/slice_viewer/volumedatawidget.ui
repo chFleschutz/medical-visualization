@@ -29,6 +29,19 @@
       <item row="0" column="0" colspan="2">
        <widget class="HistogramWidget" name="histogram_widget" native="true"/>
       </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Enable Windowing and Scroll/Drag to view diffrent Value Ranges</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -51,6 +64,19 @@
           <width>100</width>
           <height>100</height>
          </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Scroll to view Slices</string>
         </property>
        </widget>
       </item>
