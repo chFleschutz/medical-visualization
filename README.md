@@ -1,40 +1,38 @@
-# Simulation and Data Visualization
+# Medical Visualization
 
-This repository contains exercise code developed as part of the "Simulation and Data Visualization" course, displaying practical implementations of visualization techniques. The Algorithms are visualized using the Qt-Framework.
+This repository contains a collection of medical visualization techniques developed as part of the Simulation and Data Visualization course. Each project demonstrates a practical implementation using the Qt framework.
 
-Currently featured topics:
+### Features
 
-- Voronoi Fracture
-- Slice Viewer
-- Direct Volume Renderer
-- Pandemic Simulation
+- **Volume Renderer**: Visualizes volumetric CT scan data using ray marching techniques.
+- **Slice Viewer**: Displays a 2D cross-sections of 3D CT scan data.
+- **Pandemic Simulation**: Simulates and visualizes the spread of infectious diseases over time.
+- **Voronoi Fracture**: Generates Voronoi diagrams to simulate spatial partitioning.
 
 
 ## Getting Started
 
-To get started follow these steps:
+To build and run the projects:
 
-1. Make sure [Qt](https://www.qt.io/download-dev) (Version `6.6.3`) is installed on your system
+1. Install [Qt](https://www.qt.io/download-dev) (Version `6.9.0`) and ensure the **Qt Charts** module is included.
 
-2. Install the Visual Studio extension: [Qt Visual Studio Tools](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2022) and configure it for Qt version `6.6.3`
-
-3. Clone this repository to your machine:
+3. Clone this repository:
    ```bash
-   git clone https://github.com/chFleschutz/simulation-and-data-visualization.git
+   git clone https://github.com/chFleschutz/medical-visualization.git
    ```
 
-4. Open the solution in Visual Studio
+4. Open the folder in Visual Studio.
 
-5. Build and run
+5. Build and run the project.
 
 
 ## Screenshots
 
-### Voronoi Fracture
+### Volume Renderer
 
 <div style="display: flex; justify-content: center;">
-   <img src="screenshots/voronoi.png" alt="Voronoi" style="width: 39%;"/>
-   <img src="screenshots/shepard.png" alt="Shepard" style="width: 58%"/>
+   <img src="screenshots/volume-renderer-tfn.png" alt="Volume Renderer TFN" style="width: 48%;"/>
+   <img src="screenshots/volume-renderer-phong.png" alt="Volume Renderer Phong" style="width: 49%"/>
 </div>
 
 ### Slice Viewer
@@ -43,15 +41,17 @@ To get started follow these steps:
    <img src="screenshots/slice-viewer.png" alt="Slice Viewer" style="width: 97%;"/>
 </div>
 
-### Direct Volume Renderer
-
-<div style="display: flex; justify-content: center;">
-   <img src="screenshots/volume-renderer-tfn.png" alt="Volume Renderer TFN" style="width: 48%;"/>
-   <img src="screenshots/volume-renderer-phong.png" alt="Volume Renderer Phong" style="width: 49%"/>
-</div>
-
 ### Pandemic Simulation
 
 <div style="display: flex; justify-content: center;">
    <img src="screenshots/pandemic-sim.png" alt="Pandemic Simulation" style="width: 97%;"/>
 </div>
+
+
+### Voronoi Fracture
+
+<div style="display: flex; justify-content: center;">
+   <img src="screenshots/voronoi.png" alt="Voronoi" style="width: 39%;"/>
+   <img src="screenshots/shepard.png" alt="Shepard" style="width: 58%"/>
+</div>
+
