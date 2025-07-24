@@ -24,7 +24,7 @@ void CrowdSim::initialize()
 	// Spawn agents
 	std::uniform_real_distribution<float> disX(0, m_width);
 	std::uniform_real_distribution<float> disY(0, m_height);
-	std::uniform_real_distribution<float> moveAngle(0.0f, 2.0f * std::numbers::pi);
+	std::uniform_real_distribution<float> moveAngle(0.0f, 2.0f * std::numbers::pi_v<float>);
 
 	m_agents.clear();
 	m_agents.resize(m_params.agentCount);

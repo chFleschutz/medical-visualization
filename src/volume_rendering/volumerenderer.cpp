@@ -208,11 +208,11 @@ void VolumeRenderer::setupGeometry()
 
 	m_vbo.create();
 	m_vbo.bind();
-	m_vbo.allocate(vertices.data(), vertices.size() * sizeof(QVector3D));
+	m_vbo.allocate(vertices.data(), static_cast<int>(vertices.size() * sizeof(QVector3D)));
 
 	m_ibo.create();
 	m_ibo.bind();
-	m_ibo.allocate(indices.data(), indices.size() * sizeof(uint32_t));
+	m_ibo.allocate(indices.data(), static_cast<int>(indices.size() * sizeof(uint32_t)));
 
 	auto glFunctions = QOpenGLContext::currentContext()->functions();
 	glFunctions->glEnableVertexAttribArray(0);

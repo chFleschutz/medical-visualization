@@ -23,7 +23,7 @@ void TransferFunctionWidget::initialize()
 void TransferFunctionWidget::setHistogram(const Histogram& histogram)
 {
 	const auto& histogramData = histogram.data();
-	m_histogram = QImage(histogramData.size(), 256, QImage::Format_RGBA8888);
+	m_histogram = QImage(static_cast<int>(histogramData.size()), 256, QImage::Format_RGBA8888);
 	m_histogram.fill(Qt::transparent);
 
 	auto maxCount = histogram.maxCount();

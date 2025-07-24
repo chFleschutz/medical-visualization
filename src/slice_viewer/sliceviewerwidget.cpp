@@ -176,7 +176,7 @@ void SliceViewerWidget::setupGeometry()
 
 	m_vbo.create();
 	m_vbo.bind();
-	m_vbo.allocate(vertices.data(), vertices.size() * sizeof(Vertex));
+	m_vbo.allocate(vertices.data(), static_cast<int>(vertices.size() * sizeof(Vertex)));
 
 	// Position
 	m_glFunctions->glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));

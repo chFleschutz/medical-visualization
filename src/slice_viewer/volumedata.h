@@ -110,7 +110,7 @@ public:
 	}
 
 	template<typename T>
-	static void loadRaw(const std::filesystem::path& filename, VolumeData& data, int elementCount)
+	static void loadRaw(const std::filesystem::path& filename, VolumeData& data, size_t elementCount)
 	{
 		QFile rawFile(filename);
 		if (!rawFile.open(QIODevice::ReadOnly))
